@@ -1,0 +1,609 @@
+@font-face {
+    font-family: "TYPEWRITE";
+    src: url("../font/Incognitype.ttf") format("truetype");
+}
+@font-face {
+    font-family: "MANIFESTO";
+    src: url("../font/MANIFESTO.ttf") format("truetype");
+}
+@font-face {
+    font-family: "BLA CAP";
+    src: url("../font/BLANCHCAPSLIGHT.ttf") format("truetype");
+}
+@font-face {
+    font-family: "HIGHWAYS";
+    src: url("../font/HIGHWAYS.ttf") format("truetype");
+}
+@font-face {
+    font-family: "NAGOMI";
+    src: url("../font/NagomiGokubosoGothic-ExtraLight.otf") format("opentype");
+}
+
+* {
+    outline: none;
+}
+
+@media screen and (min-width:1024px) {
+    html {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: 62.5%;
+        color: #333;
+        font-family: 'Arial','YuGothic','Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', 'Meiryo','ＭＳ ゴシック',sans-serif;
+        #loading {
+            z-index: 100;
+            height: 100vh;
+            width: 100vw;
+            background: #151A1F;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom right,#4A4F55,#151A1F);
+            .container {
+                display: none;
+                flex-direction: row;
+                width: 100rem;
+                height: 50rem;
+                background: rgba(26,21,31,0.9);
+                perspective: 50rem;
+                box-shadow: 0 0 5rem rgba(0,0,0,0.7);
+                #aside {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 10%;
+                    height: 100%;
+                    border-right: .5rem solid #4A4F55;
+                    background: #151A1F;
+                    button {
+                        position: absolute;
+                        top: 0;
+                        left: 2rem;
+                        margin-top: 20%;
+                        border: none;
+                        background: transparent;
+                        i.fa-bars {
+                            transition: all .8s ease-in-out 0s;
+                            opacity: 1;
+                            width: 100%;
+                            height: 100%;
+                            color: white;
+                        }
+                        i.fa-times {
+                            transition: all .8s ease-in-out 0s;
+                            opacity: 1;
+                            width: 100%;
+                            height: 100%;
+                            color: white;
+                        }
+                    }
+                    button:nth-of-type(2) {
+                        display: none;
+                        left: 2.4rem !important;
+                    }
+                }
+                #main {
+                    position: relative;
+                    width: 90%;
+                    height: 100%;
+                    background: #151A1F;
+                    #top {
+                        display: block;
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        background: url(../img/main.jpg) center center no-repeat;
+                        background-size: cover;
+                        img {
+                            top: 0;
+                            bottom: 0;
+                            margin: auto 0;
+                            z-index: 2;
+                            position: absolute;
+                            left: 1%;
+                            width: 98%;
+                        }
+                    }
+                    #section-user {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: none;
+                        width: 100%;
+                        height: 100%;
+                        .swiper-container {
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            .swiper-wrapper {
+                                width: 100%;
+                                height: 100%;
+                                .swiper-slide {
+                                    width: 100%;
+                                    height: 100%;
+                                    background: #ECEFF1;
+                                    color: #333;
+                                    font-family: 'MANIFESTO';
+                                    position: relative;
+                                }
+                                .slide01 {
+                                    h3 {
+                                        position: absolute;
+                                        top: 3rem;
+                                        left: 3rem;
+                                        font-size: 3rem;
+                                    }
+                                    .phrase-1 {
+                                        position: absolute;
+                                        top: 7rem;
+                                        left: 5rem;
+                                        font-size: 2.6rem;
+                                        font-weight: bold;
+                                        font-family: 'BLA CAP';
+                                        letter-spacing: .5rem;
+                                    }
+                                    .phrase-2 {
+                                        position: absolute;
+                                        bottom: 1rem;
+                                        right: 9rem;
+                                        font-size: 2.6rem;
+                                        font-weight: bold;
+                                        font-family: 'BLA CAP';
+                                        letter-spacing: .2rem;
+                                    }
+                                    img {
+                                        position: absolute;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                        bottom: 0;
+                                        filter: drop-shadow(10px 15px 15px rgba(0,0,0,0.3));
+                                    }
+                                }
+                                .slide02 {
+                                    .phrase-1 {
+                                        position: absolute;
+                                        top: 7rem;
+                                        left: 5rem;
+                                        font-size: 2rem;
+                                        font-weight: bold;
+                                        letter-spacing: .2rem;
+                                        line-height: 4rem;
+                                        font-family: 'NAGOMI';
+                                    }
+                                    img {
+                                        position: absolute;
+                                        right: 2rem;
+                                        bottom: 0;
+                                        filter: drop-shadow(10px 15px 15px rgba(0,0,0,0.3));
+                                    }
+                                }
+                                .slide03 {
+                                    .phrase-1 {
+                                        position: absolute;
+                                        top: 6rem;
+                                        left: 12rem;
+                                        font-size: 5rem;
+                                        font-weight: bold;
+                                        letter-spacing: .2rem;
+                                        line-height: 4rem;
+                                        font-family: 'BLA CAP';
+                                    }
+                                    .phrase-2 {
+                                        position: absolute;
+                                        top: 12rem;
+                                        left: 12rem;
+                                        font-size: 3rem;
+                                        font-weight: bold;
+                                        letter-spacing: .2rem;
+                                        line-height: 4rem;
+                                        font-family: 'NAGOMI';
+                                    }
+                                    .phrase-3 {
+                                        position: absolute;
+                                        top: 20rem;
+                                        left: 15rem;
+                                        font-size: 2rem;
+                                        font-weight: bold;
+                                        letter-spacing: .2rem;
+                                        line-height: 3.4rem;
+                                        font-family: 'NAGOMI';
+                                        span {
+                                            font-size: 4rem;
+                                            font-weight: bold;
+                                            font-family: 'BLA CAP';
+                                        }
+                                    }
+                                    img {
+                                        border-radius: 50%;
+                                        opacity: .9;
+                                        width: 6rem;
+                                        position: absolute;
+                                        top: 5rem;
+                                        left: 5rem;
+                                    }
+                                }
+                            }
+                            .swiper-button-next, .swiper-button-prev {
+                                background-image: none !important;
+                                color: #333;
+                                font-size: 4rem;
+                            }
+                            .swiper-button-next:hover, .swiper-button-prev:hover {
+                                transition: .8s;
+                                opacity: 0.7;
+                            }
+                            .swiper-button-next {
+                                right: 4rem;
+                                bottom: 2rem;
+                            }
+                            .swiper-button-prev {
+                                right: 4rem;
+                                top: 5rem;
+                            }
+                        }
+                    }
+                    #section-works {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: none;
+                        width: 100%;
+                        height: 100%;
+                        background: #151A1F;
+                        overflow: hidden;
+                        .hexa-container {
+                            width: 100%;
+                            position: relative;
+                            margin-top: 5rem;
+                            margin-left: 3rem;
+                        }
+                        .hexagon {
+                            position: relative;
+                            display: block;
+                            width: 11.01rem;
+                            height: 6.3rem;
+                            background: #ECEFF1;
+                            transition: all .8s ease-in-out;
+                            span {
+                                font-family: 'NAGOMI';
+                                font-size: 2rem;
+                                font-weight: bold;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                text-align: center;
+                                color: #333;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                z-index: 1;
+                                width: 100%;
+                                height: 100%;
+                            }
+                            &:before, &:after {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                z-index: 0;
+                                width: 100%;
+                                height: 100%;
+                                background: #ECEFF1;
+                                transition: all .8s ease-in-out;
+                            }
+                            &:before {
+                                transform: rotate(60deg);
+                            }
+                            &:after {
+                                transform: rotate(-60deg);
+                            }
+                            &:hover, &:hover::before, &:hover::after {
+                                background: #FF261D;
+                            }
+                        }
+                        .hexa-1 {
+                            position: absolute;
+                            top: 7rem;
+                            left: 56.2%;
+                            span {
+                                opacity: 0;
+                                transition: .8s ease-in-out;
+                                font-size: 1.4rem;
+                                line-height: 1.4rem;
+                                font-family: 'NAGOMI';
+                                color: white;
+                            }
+                        }
+                        .hexa-2 {
+                            position: absolute;
+                            top: 7rem;
+                            left: 43.3%;
+                        }
+                        .hexa-3 {
+                            position: absolute;
+                            top: 7rem;
+                            left: 30.54%;
+                            span {
+                                opacity: 0;
+                                transition: .8s ease-in-out;
+                                font-size: 1.4rem;
+                                line-height: 1.4rem;
+                                font-family: 'NAGOMI';
+                                color: white;
+                            }
+                        }
+                        .hexa-4 {
+                            position: absolute;
+                            top: 7rem;
+                            left: 17.8%;
+                        }
+                        .hexa-5 {
+                            position: absolute;
+                            top: 17rem;
+                            left: 11.44%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            img {
+                                z-index: 1;
+                                width: 90%;
+                            }
+                        }
+                        .hexa-6 {
+                            position: absolute;
+                            top: 27rem;
+                            left: 17.8%;
+                        }
+                        .hexa-7 {
+                            position: absolute;
+                            top: 27rem;
+                            left: 30.5%;
+                            span {
+                                opacity: 0;
+                                transition: .8s ease-in-out;
+                                font-size: 1.4rem;
+                                line-height: 1.4rem;
+                                font-family: 'NAGOMI';
+                                color: white;
+                            }
+                        }
+                        .hexa-8 {
+                            position: absolute;
+                            top: 27rem;
+                            left: 43.3%;
+                        }
+                        .hexa-9 {
+                            position: absolute;
+                            top: 27rem;
+                            left: 56.2%;
+                            span {
+                                opacity: 0;
+                                transition: .8s ease-in-out;
+                                font-size: 1.4rem;
+                                line-height: 1.4rem;
+                                font-family: 'NAGOMI';
+                                color: white;
+                            }
+                        }
+                        .hexa-10 {
+                            position: absolute;
+                            top: 17rem;
+                            left: 62.6%;
+                            background: #ECEFF1 !important;
+                            cursor: default;
+                            &::after, &::before {
+                                background: #ECEFF1 !important;
+                            }
+                            span {
+                                font-size: 4rem;
+                                font-family: 'BLA CAP','MANIFESTO','NAGOMI';
+                            }
+                        }
+                    }
+                    #section-portfolio {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: none;
+                        width: 100%;
+                        height: 100%;
+                        background: #ECEFF1;
+                        overflow: hidden;
+                        font-size: 5rem;
+                        overflow-y: scroll;
+                        .container {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 100%;
+                            background: #ECEFF1;
+                            padding-top: 3rem;
+                            section {
+                                width: 60%;
+                                height: 20rem;
+                                background: #F7F7F7;
+                                margin-bottom: 3rem;
+                                border-radius: .2rem;
+                                box-shadow: .5rem .5rem .8rem rgba(0,0,0,0.3);
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                padding: 0 4rem;
+                                img {
+                                    width: 10rem;
+                                    height: 10rem;
+                                    border-radius: 50%;
+                                    box-shadow: .5rem .5rem .8rem rgba(0,0,0,0.3);
+                                }
+                                .contents {
+                                    margin-left: 5rem;
+                                    font-size: 2rem;
+                                    p {
+                                        margin-bottom: 1rem;
+                                    }
+                                    p:first-of-type {
+                                        font-weight: bold;
+                                        font-size: 4rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    #section-policy   {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: none;
+                        width: 100%;
+                        height: 100%;
+                        background: #ECEFF1;
+                        overflow: hidden;
+                        font-size: 5rem;
+                    }
+                    #section-process {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: none;
+                        width: 100%;
+                        height: 100%;
+                        background: #ECEFF1;
+                        overflow: hidden;
+                        font-size: 5rem;
+                    }
+                    .return-btn {
+                        position: absolute;
+                        z-index: 5;
+                        color: #333;
+                        top: 3rem;
+                        left: 2rem;
+                        border: none;
+                        background: transparent;
+                        cursor: pointer;
+                        &:hover {
+                            opacity: 0.7;
+                            transition: .8s ease-in-out;
+                        }
+                    }
+                    .preparing {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        margin-left: 40%;
+                    }
+                    #drawer-menu {
+                        z-index: 5;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 0%;
+                        height: 100%;
+                        background: rgba(21,26,31,0.9);
+                        transition: all .8s ease-in-out 0s;
+                        img {
+                            display: none;
+                            margin-top: 5rem;
+                            margin-bottom: 10rem;
+                            height: 15rem;
+                            transition: all .8s ease-in-out 0s;
+                        }
+                        p {
+                            display: none;
+                            color: white;
+                            font-size: 1.5rem;
+                            text-align: center;
+                            width: 30rem;
+                            transition: all .8s ease-in-out 0s;
+                        }
+                        ul {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-around;
+                            align-items: center;
+                            list-style: none;
+                            li {
+                                position: relative;
+                                font-family: 'MANIFESTO';
+                                a:hover {
+                                    cursor: pointer;
+                                    transition: 1s;
+                                    opacity: .3;
+                                }
+                            }
+                            .menu-user, .menu-works, .menu-contact {
+                                font-size: 3rem;
+                                color: white;
+                            }
+                            .menu-user::before {
+                                position: absolute;
+                                top: -5rem;
+                                left: -3rem;
+                                width: 15rem;
+                                content: attr(data-item);
+                            }
+                            .menu-works::before {
+                                position: absolute;
+                                top: -5rem;
+                                left: -4rem;
+                                width: 24rem;
+                                content: attr(data-item);
+                            }
+                            .menu-contact::before {
+                                position: absolute;
+                                top: -5rem;
+                                left: -4rem;
+                                content: attr(data-item);
+                                width: 15rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@import 'partials/responsive_m';
+@import 'partials/responsive_s';
+
+@media all and (-ms-high-contrast: none) {
+    .hexa-10 {
+        span {
+            font-size: 2rem !important;
+        }
+    }
+}
+
+.active-drawer {
+    opacity: 1 !important;
+    width: 100% !important;
+}
+
+@keyframes light-up {
+    0% {
+        background: #ECEFF1;
+    }
+    50% {
+        background: #FF261D;
+    }
+    100% {
+        background: #ECEFF1;
+    }
+}
